@@ -20,5 +20,5 @@ app.listen(port, () => {
 
 app.post('/api/login', (req, res) => {
   console.log(req.body);
-  res.redirect('http://localhost:4200/dashboard/dashboard/')
+  res.redirect('https://login-dashboard-gamma.vercel.app/dashboard/dashboard/')
 });
