@@ -15,15 +15,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 import { FormsModule } from '@angular/forms';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    DashboardComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
