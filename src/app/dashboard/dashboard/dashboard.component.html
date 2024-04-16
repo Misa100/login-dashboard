@@ -1,0 +1,162 @@
+<div class="p-4">
+     <div class="d-flex flex-row align-items-center justify-content-sm-center custom-sm-flex-column">
+         <div class="col-lg-2 col-md-6 col-sm-6 mb-1">
+             <div class="card text-white card-small" style="width: 18rem;background-color: rgb(155, 192, 220)">
+                 <div class="card-body">
+                     <div class="card-icon"><i class="material-icons">content_copy</i></div>
+                     <p class="card-category">Used Space</p>
+                     <h4 class="card-title">49/50 <small>GB</small></h4>
+                     <hr>
+                     <i class="bi bi-exclamation-triangle-fill"></i>  Get More Space...
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-2 col-md-6 col-sm-6 mb-1">
+             <div class="card card-small" style="width: 18rem;background-color: rgb(233, 233, 233);color: #454747;">
+                 <div class="card-body">
+                     <div class="card-icon"><i class="material-icons">store</i></div>
+                     <p class="card-category">Revenue</p>
+                     <h4 class="card-title">$34,245</h4>
+                     <hr>
+                     <i class="bi bi-calendar-check-fill" style="font-size: 1.2em;"></i> Last 24 Hours
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-2 col-md-6 col-sm-6 mb-1">
+             <div class="card text-white card-small" style="width: 18rem;background-color: rgb(155, 192, 220)">
+                 <div class="card-body">
+                     <i class="bi bi-people-fill"></i>
+                     <p class="card-category">Total Users</p>
+                     <h4 class="card-title">1 500</h4>
+                     <hr>
+                     <i class="bi bi-arrow-clockwise" style="font-size: 1.3em;"></i>  Last updated
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-2 col-md-6 col-sm-6 mb-1">
+             <div class="card card-small" style="width: 18rem;background-color: rgb(233, 233, 233);color: #454747;">
+                 <div class="card-body">
+                     <i class="bi bi-collection-fill"></i>
+                     <p class="card-category">Total Collections</p>
+                     <h4 class="card-title">1 700</h4>
+                     <hr>
+                     <i class="bi bi-google" style="font-size: 1.4em;"></i> Tracked from Google
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-2 col-md-6 col-sm-6 mb-1">
+             <div class="card text-white card-small" style="width: 18rem;background-color: rgb(155, 192, 220)">
+                 <div class="card-body">
+                     <i class="bi bi-server"></i>
+                     <p class="card-category">Total Connections</p>
+                     <h4 class="card-title">1 000</h4>
+                     <hr>
+                     <i class="bi bi-calendar-check-fill" style="font-size: 1.3em;"></i> From Last Year
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-2 col-md-6 col-sm-6 mb-1">
+             <div class="card card-small" style="width: 18rem;background-color: rgb(233, 233, 233);color: #454747;">
+                 <div class="card-body">
+                     <div class="card-icon"><i class="material-icons">info_outline</i></div>
+                     <p class="card-category">Fixed Issues</p>
+                     <h4 class="card-title">75</h4>
+                     <hr>
+                     <i class="bi bi-tag-fill" style="font-size: 1.1em;"></i> Tracked from Github
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="card mt-3">
+         <div class="card-body" style="background-color: rgb(237, 237, 237);">
+             <div class="d-md-flex align-items-center">
+                 <div>
+                     <h4 class="card-title">Sales Ratio</h4>
+                     <h5 class="card-subtitle text-muted">Yearly Sales Report</h5>
+                 </div>
+             </div>
+             <div class="row mt-3">
+                 <!-- column -->
+                 <div class="col-lg-12">
+                     <div>
+                         <div class="d-flex flex-column w-100">
+                             <apx-chart [series]="salesChartOptions.series" [chart]="salesChartOptions.chart" [plotOptions]="salesChartOptions.plotOptions"
+                                 [xaxis]="salesChartOptions.xaxis" [yaxis]="salesChartOptions.yaxis"
+                                 [grid]="salesChartOptions.grid" [stroke]="salesChartOptions.stroke"
+                                 [tooltip]="salesChartOptions.tooltip" [dataLabels]="salesChartOptions.dataLabels"
+                                 [legend]="salesChartOptions.legend" [colors]="salesChartOptions.colors"
+                                 [markers]="salesChartOptions.markers">
+                             </apx-chart>
+                         </div>
+                     </div>
+                 </div>
+                 <!-- column -->
+             </div>
+         </div>
+     </div>
+     <div class="row mt-3">
+         <div class="col-lg-7 mb-2">
+             <div class="card">
+                 <div class="card-body" style="background-color: rgb(237, 237, 237);">
+                     <!-- title -->
+                             <h4 class="card-title">Top Selling</h4>
+                             <h5 class="card-subtitle">Overview of the projects</h5>
+                         
+                     <!-- title -->
+                     <div class="table-responsive">
+                         <table class="table align-middle mb-0">
+                             <thead>
+                                 <tr>
+                                     <th class="text-dark fs-4">Team Lead</th>
+                                     <th class="text-dark fs-4">Project</th>
+                                     <th class="text-dark fs-4">Status</th>
+                                     <th class="text-dark fs-4">Budget</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                                 <tr *ngFor='let ts of topSellingProducts'>
+                                     <td>
+                                         <div class="d-flex align-items-center">
+                                             <img [src]=ts.image alt="user" width="45" class="rounded-circle">
+                                             <div class="ms-3">
+                                                 <h5 class="mb-0 font-medium custom-fw-sm">{{ts.uname}}</h5>
+                                                 <span class="text-muted custom-fw-sm">{{ts.gmail}}</span>
+                                             </div>
+                                         </div>
+                                     </td>
+                                     <td class="fw-normal custom-fw-sm">{{ts.productName}}</td>
+                                     <td>
+                                         <span class="p-2 bg-{{ts.status}} rounded-circle d-inline-block ms-3"></span>
+                                     </td>
+                                     <td>
+                                         <h5 class="mb-0 fw-normal custom-fw-sm">{{ts.budget}}</h5>
+                                     </td>
+                                 </tr>              
+                             </tbody>
+                         </table>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-5">
+             <div class="card">
+                 <div class="card-body" style="background-color: rgb(237, 237, 237);">
+                     <h4 class="card-title">Feeds</h4>
+                     <h5 class="card-subtitle text-muted">Widget you can use</h5>
+                     <div class="feed-widget mt-4 pt-3">
+                         <ul class="list-unstyled feed-body m-0">
+                             <li class="feed-item d-flex align-items-center mb-3" *ngFor='let feed of feeds'>
+                                 <div class="feed-icon text-white d-flex align-items-center justify-content-center rounded-circle {{feed.class}}" style="width: 30px; height: 30px;">
+                                     <i class={{feed.icon}}></i>
+                                 </div>
+                                 <h5 class="mb-0 fw-normal ms-3 custom-fw-sm">{{feed.task}}</h5>
+                                 <span class="text-muted ms-auto custom-fw-sm"> {{feed.time}}</span>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ 

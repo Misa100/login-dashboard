@@ -1,0 +1,26 @@
+td, tbody, th, thead {
+     background-color: rgb(233, 233, 233);
+}
+
+.card-small {
+     padding: 1px;
+     font-size: 0.8rem; /* Réduit la taille du texte */
+ }
+ 
+ .card-small .card-title,
+ .card-small .card-category {
+     margin-bottom: 1px;
+ }
+ 
+ .card-small .card-icon {
+     font-size: 1px; /* Réduit la taille de l'icône */
+ }
+ 
+ @media (max-width: 767.98px) { /* Bootstrap sm breakpoint */
+    .custom-sm-flex-column {
+        flex-direction: column !important;
+    }
+    .custom-fw-sm {
+        font-size: 14px;
+    }
+}

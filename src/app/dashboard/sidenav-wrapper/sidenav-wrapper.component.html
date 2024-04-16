@@ -1,0 +1,44 @@
+<mat-sidenav-container autosize>
+     <mat-sidenav #sidenav mode="side" opened="isExpanded" class="custom-sidenav">
+       <mat-nav-list>
+         <!-- Existing items -->
+         <mat-list-item>
+           <h4 [hidden]="!isExpanded" class="text-white text-center">Angular</h4>
+         </mat-list-item>
+         <hr>
+   
+         <mat-list-item [routerLink]="'dashboard'">
+           <i class="bi bi-house" style="font-size: 1.5em; color: white;"></i>
+           <span *ngIf="isExpanded" class="menu-item text-white">Dashboard</span>
+         </mat-list-item>
+   
+         <mat-list-item [routerLink]="'info'">
+           <i class="bi bi-info-circle" style="font-size: 1.5em; color: white;"></i>
+           <span *ngIf="isExpanded" class="menu-item text-white">Info</span>
+         </mat-list-item>
+   
+         <mat-list-item [routerLink]="'user'">
+           <i class="bi bi-people-fill" style="font-size: 1.5em; color: white;"></i>
+           <span *ngIf="isExpanded" class="menu-item text-white">User</span>
+         </mat-list-item>
+   
+         <!-- New Sign Out Button -->
+         <mat-list-item (click)="handleSignOut()" class="bottom-item" style="background-color: rgb(83, 140, 191);">
+           <i class="bi bi-box-arrow-right" style="font-size: 1.5em; color: white;"></i>
+          <span *ngIf="isExpanded" class="menu-item text-white">Sign Out</span>
+         </mat-list-item>
+       </mat-nav-list>
+     </mat-sidenav>
+   
+     <mat-sidenav-content class="sidenav-content">
+       <mat-toolbar style="background-color: rgb(195, 209, 220);">
+         <div class="d-flex align-items-center" (click)="isExpanded = !isExpanded">
+           <button *ngIf="!isExpanded"  class="btn btn-sm" style="border-radius: 5px;background-color: rgb(228, 230, 231);"><i class="ms-1 bi bi-caret-right-fill" style="color: rgb(11, 102, 172);"></i></button>
+           <button *ngIf="isExpanded" class="btn btn-sm" style="border-radius: 5px;background-color: rgb(228, 230, 231);"><i class="ms-1 bi bi-caret-left-fill" style="color: rgb(11, 102, 172);"></i></button>
+         </div>
+         <h4 class="ms-2 mt-1" style="color: rgb(50, 134, 207);">{{ currentRouteName }}</h4>
+       </mat-toolbar>
+       <router-outlet></router-outlet>
+     </mat-sidenav-content>
+   </mat-sidenav-container>
+   

@@ -1,0 +1,55 @@
+<section class="vh-100 gradient-custom">
+     <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+               <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card text-white" style="border-radius: 1rem; background-color: rgb(62, 63, 63);">
+                         <div class="card-body p-5 text-center">
+
+                              <div class="mb-md-5 mt-md-4 pb-5">
+
+                                   <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                                   <p class="text-white-50 mb-5">Please enter your login and password!</p>
+
+                                   <mat-form-field appearance="fill" class="mb-4 w-100">
+                                        <mat-label>Email</mat-label>
+                                        <input matInput type="email" [(ngModel)]="email"/>
+                                   </mat-form-field>
+                                   <mat-form-field appearance="fill" class="mb-4 w-100">
+                                        <mat-label>Password</mat-label>
+                                        <input matInput type="password" [(ngModel)]="password" />
+                                   </mat-form-field>
+
+                                   <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!"></a>Forgot password?</p>
+                                   <button class="btn btn-outline-light btn-lg px-5" type="submit" (click)="onLogin()">Login</button>
+                                   <hr style="width: 52%; margin-left: 24%; margin-bottom: 10px;">
+                                   <div class="d-flex flex-column justify-content-center align-items-center">
+                                        <!--Google-->
+                                        <div id="g_id_onload"
+                                        data-client_id="896819295026-97rqn8un5njdktvrb33jlfmlnmp0n0na.apps.googleusercontent.com"
+                                        data-context="signin"
+                                        data-ux_mode="popup"
+                                        data-login_uri="http://localhost:3000/api/login"
+                                        data-auto_select="true"
+                                        data-itp_support="true">
+                                        </div>
+                                        <div class="g_id_signin mt-2"
+                                        data-type="standard"
+                                        data-shape="rectangular"
+                                        data-theme="outline"
+                                        data-text="signin_with"
+                                        data-size="large"
+                                        data-logo_alignment="left">
+                                        </div>
+                                   </div>
+                                        <!--Google-->
+                              </div>
+                              <div>
+                                   <p class="mb-0">Don't have an account? <a href="#!" class="fw-bold" style="color: rgb(90, 171, 237);">Sign Up</a></p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>
+

@@ -1,0 +1,32 @@
+mat-sidenav-container {
+     height: 100%;
+   
+     mat-sidenav {
+       mat-nav-list {
+         .menu-item {
+           margin-left: 8px;
+         }
+       }
+     }
+   }
+   
+   .custom-sidenav {
+     background-color: #6dacd6;
+     color: #ffffff;
+ }
+
+ .sidenav-content {
+     background-color: rgb(219, 219, 219);
+ }
+
+ .btn:hover {
+  color: rgb(11, 102, 172);
+ }
+
+ .bottom-item {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+ 
