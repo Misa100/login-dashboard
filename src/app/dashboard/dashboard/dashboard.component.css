@@ -4,19 +4,59 @@ td, tbody, th, thead {
 
 .card-small {
      padding: 1px;
-     font-size: 0.8rem; /* Réduit la taille du texte */
+     font-size: 0.8rem;
  }
- 
+
  .card-small .card-title,
  .card-small .card-category {
      margin-bottom: 1px;
  }
- 
+
  .card-small .card-icon {
-     font-size: 1px; /* Réduit la taille de l'icône */
+     font-size: 1px;
  }
- 
- @media (max-width: 767.98px) { /* Bootstrap sm breakpoint */
+
+ .card-small {
+    width: 17rem;
+
+    @media ((min-width: 768px) and (max-width: 1280px)) {
+        width: 11rem;
+    }
+    @media ((min-width: 480px) and (max-width: 767px)) {
+        min-width: 18rem;
+        max-width: 20rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 1rem;
+        margin-bottom: 12px;
+    }
+    @media ((min-width: 392px) and (max-width: 479px)) {
+        min-width: 12rem;
+        max-width: 13rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 1rem;
+        margin-bottom: 12px;
+    }
+}
+
+.card-container {
+    @media ((min-width: 392px) and (max-width: 767px)) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        align-items: stretch;
+    }
+}
+
+ @media (max-width: 767.98px) {
     .custom-sm-flex-column {
         flex-direction: column !important;
     }
